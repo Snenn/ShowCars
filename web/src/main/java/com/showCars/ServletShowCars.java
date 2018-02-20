@@ -16,7 +16,7 @@ public class ServletShowCars extends HttpServlet {
         //List<Car> cars = Dao.getDAO().getAll();
         //response.getWriter().println(cars);
 //        response.getWriter().println("Yep");
-        RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("responseServlet.jsp");
+        RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/responseServlet.jsp");
         dispatcher.forward(request, response);
     }
 
