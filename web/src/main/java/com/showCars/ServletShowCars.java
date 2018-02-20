@@ -1,6 +1,7 @@
 package com.showCars;
 
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -14,9 +15,9 @@ public class ServletShowCars extends HttpServlet {
             throws ServletException, IOException {
         //List<Car> cars = Dao.getDAO().getAll();
         //response.getWriter().println(cars);
-        response.getWriter().println("Yep");
-//        RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/404.jsp");
-//        dispatcher.forward(request, response);
+//        response.getWriter().println("Yep");
+        RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/responseServlet.jsp");
+        dispatcher.forward(request, response);
     }
 
     @Override
