@@ -21,6 +21,7 @@ public class ServletShowCars extends HttpServlet {
         out.println("<h1>Hello Servlet Get</h1>");
         out.println("</body>");
         out.println("</html>");
+        out.close();
 //        RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/responseServlet.jsp");
 //        dispatcher.forward(request, response);
     }
