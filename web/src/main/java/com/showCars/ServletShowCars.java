@@ -14,7 +14,7 @@ public class ServletShowCars extends HttpServlet {
             throws ServletException, IOException {
         //List<Car> cars = Dao.getDAO().getAll();
         //response.getWriter().println(cars);
-        response.getWriter().append("Yep");
+        response.getWriter().append("<html><body>Heee</body></html>");
 //        RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/responseServlet.jsp");
 //        dispatcher.forward(request, response);
     }
@@ -24,7 +24,7 @@ public class ServletShowCars extends HttpServlet {
             throws ServletException, IOException {
         //List<Car> cars = Dao.getDAO().getAll();
         //response.getWriter().println(cars);
-        response.getWriter().append("Yep");
+        response.getWriter().append("<html><body>Heee</body></html>");
 //        RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/responseServlet.jsp");
 //        dispatcher.forward(request, response);
     }
