@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 public class ServletShowCars extends HttpServlet {
 
@@ -14,7 +15,12 @@ public class ServletShowCars extends HttpServlet {
             throws ServletException, IOException {
         //List<Car> cars = Dao.getDAO().getAll();
         //response.getWriter().println(cars);
-        response.getWriter().append("<html><body>Heee</body></html>");
+        PrintWriter out = response.getWriter();
+        out.println("<html>");
+        out.println("<body>");
+        out.println("<h1>Hello Servlet Get</h1>");
+        out.println("</body>");
+        out.println("</html>");
 //        RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/responseServlet.jsp");
 //        dispatcher.forward(request, response);
     }
@@ -24,7 +30,12 @@ public class ServletShowCars extends HttpServlet {
             throws ServletException, IOException {
         //List<Car> cars = Dao.getDAO().getAll();
         //response.getWriter().println(cars);
-        response.getWriter().append("<html><body>Heee</body></html>");
+        PrintWriter out = response.getWriter();
+        out.println("<html>");
+        out.println("<body>");
+        out.println("<h1>Hello Servlet Get</h1>");
+        out.println("</body>");
+        out.println("</html>");
 //        RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/responseServlet.jsp");
 //        dispatcher.forward(request, response);
     }
