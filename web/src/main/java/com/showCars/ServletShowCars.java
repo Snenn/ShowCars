@@ -20,6 +20,16 @@ public class ServletShowCars extends HttpServlet {
     }
 
     @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        //List<Car> cars = Dao.getDAO().getAll();
+        //response.getWriter().println(cars);
+        response.getWriter().append("Yep");
+//        RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/responseServlet.jsp");
+//        dispatcher.forward(request, response);
+    }
+
+    @Override
     public void init() throws ServletException {
         System.out.println("Servlet " + this.getServletName() + " has started");
     }
