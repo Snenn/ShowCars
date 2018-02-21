@@ -7,6 +7,20 @@
           <element id="module-output" name="ShowCars" />
         </element>
         <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.apache.tomcat.embed:tomcat-embed-core:8.5.23" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-annotations-api:8.5.23" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat.embed:tomcat-embed-jasper:8.5.23" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat.embed:tomcat-embed-el:8.5.23" />
+          <element id="library" level="project" name="Maven: org.eclipse.jdt:ecj:3.12.3" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-jasper:8.5.23" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-servlet-api:8.5.23" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-juli:8.5.23" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-el-api:8.5.23" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-api:8.5.23" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-util-scan:8.5.23" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-util:8.5.23" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-jasper-el:8.5.23" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-jsp-api:8.5.23" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.6" />
           <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:3.1.0" />
           <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
