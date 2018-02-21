@@ -2,6 +2,7 @@ package com.showCars;
 
 
 import javax.servlet.ServletException;
+import javax.servlet.ServletOutputStream;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -19,15 +20,19 @@ public class ServletShowCars extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
+//        response.setContentType("text/html;charset=UTF-8");
 //        //List<Car> cars = Dao.getDAO().getAll();
 //        //response.getWriter().println(cars);
-        PrintWriter out = response.getWriter();
-        out.println("<html>");
-        out.println("<body>");
-        out.println("<h1>Hello Servlet Get</h1>");
-        out.println("</body>");
-        out.println("</html>");
+//        PrintWriter out = response.getWriter();
+//        out.println("<html>");
+//        out.println("<body>");
+//        out.println("<h1>Hello Servlet Get</h1>");
+//        out.println("</body>");
+//        out.println("</html>");
+//        out.close();
+        ServletOutputStream out = response.getOutputStream();
+        out.write("hello heroku".getBytes());
+        out.flush();
         out.close();
 //        RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/responseServlet.jsp");
 //        dispatcher.forward(request, response);
