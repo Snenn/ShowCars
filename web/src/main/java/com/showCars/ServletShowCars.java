@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet("/")
+@WebServlet("/showCars")
 public class ServletShowCars extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
