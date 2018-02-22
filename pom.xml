@@ -46,7 +46,7 @@
         <project.resources.sourceEncoding>UTF-8</project.resources.sourceEncoding>
     </properties>
     <build>
-        <finalName>ROOT</finalName>
+        <finalName>ShowCars</finalName>
 
         <plugins>
             <plugin>
