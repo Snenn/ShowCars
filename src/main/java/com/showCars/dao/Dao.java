@@ -2,6 +2,7 @@ package com.showCars.dao;
 
 import com.showCars.pojos.Car;
 
+import java.net.URISyntaxException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -43,6 +44,8 @@ public class Dao implements IDao {
             }
         } catch (SQLException e) {
 
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
         }
         return cars;
     }
@@ -63,6 +66,8 @@ public class Dao implements IDao {
             statement.executeUpdate(sql);
         } catch (SQLException e) {
             System.out.println("Error"+e);
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
         }
 
 
