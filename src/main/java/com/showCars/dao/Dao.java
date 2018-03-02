@@ -29,47 +29,49 @@ public class Dao implements IDao {
     public List getAll() {
         List<Car> cars = new ArrayList();
         String sql = "SELECT * FROM car";
-        try (Connection connection = DBConnection.getConnection();
-             Statement statement = connection.createStatement()
-        ) {
-            ResultSet rs = statement.executeQuery(sql);
-            while (rs.next()) {
-                Car car = new Car();
+        try (Connection connection = DBConnection.getConnection()) {
 
-                car.setModel(rs.getString("model"));
+            try (
+                    Statement statement = connection.createStatement()
+            ) {
+                ResultSet rs = statement.executeQuery(sql);
+                while (rs.next()) {
+                    Car car = new Car();
 
-                car.setColor(rs.getString("color"));
+                    car.setModel(rs.getString("model"));
 
-                cars.add(car);
-            }
-        } catch (SQLException e) {
+                    car.setColor(rs.getString("color"));
 
-        } catch (URISyntaxException e) {
+                    cars.add(car);
+                }
+            }} catch (URISyntaxException e) {
+                e.printStackTrace();
+            } catch (SQLException e) {
             e.printStackTrace();
         }
         return cars;
-    }
-
-    @Override
-    public void save(Object o) {
-
-    }
-
-    public void save(Car car) {
-        String sql = String.format(
-                "insert INTO car(model, color) values('%s', '%s');",
-                car.getModel(), car.getColor()
-        );
-        try (Connection connection = DBConnection.getConnection();
-             Statement statement = connection.createStatement()
-        ) {
-            statement.executeUpdate(sql);
-        } catch (SQLException e) {
-            System.out.println("Error"+e);
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
         }
 
+        @Override
+        public void save (Object o){
 
-    }
+        }
+
+//    public void save(Car car) {
+//        String sql = String.format(
+//                "insert INTO car(model, color) values('%s', '%s');",
+//                car.getModel(), car.getColor()
+//        );
+//        try (Connection connection = DBConnection.getConnection();
+//             Statement statement = connection.createStatement()
+//        ) {
+//            statement.executeUpdate(sql);
+//        } catch (SQLException e) {
+//            System.out.println("Error" + e);
+//        } catch (URISyntaxException e) {
+//            e.printStackTrace();
+//        }
+//
+//
+//    }
 }
