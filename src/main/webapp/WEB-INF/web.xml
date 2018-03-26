@@ -14,7 +14,7 @@
     </welcome-file-list>
     
     <error-page>
-        <location>/404.jsp</location>
+        <location>404.jsp</location>
     </error-page>
 
 </web-app>
